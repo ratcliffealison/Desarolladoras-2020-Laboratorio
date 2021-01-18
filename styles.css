@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  color: blue;
+  text-shadow: 2px 1px 2px yellow;
+}
+fieldset {
+  background-color: aqua;
+  border-radius: 3px;
+  border: none;
+  margin: 10px 0px;
+}
+input {
+  background-color: yellow;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+legend {
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+button {
+  background-color: #ffbfcb;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0px 3px 2px 0px #e5d3d7;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.botonControlFormulario {
+  background-color: #dee3dd;
+  border: 1px solid #b3b3b3;
+  border-radius: 0px;
+}

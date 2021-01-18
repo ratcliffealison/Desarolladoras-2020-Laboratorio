@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Formulario Telefónico</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Información Alta Telefónica</h1>
+
+        <form>
+                <fieldset class="datosPersonales">
+                    <legend>
+                        Datos Personales
+                    </legend> 
+                        <label for="nombre"></label>Nombre: <input type="text" maxlength="30" name="nombre" id="nombre" required/><br>
+                        <label for="apellidos">Apellidos </label><input type="text" maxlength="60" name= "apellidos" id="apellidos" required/><br>
+                        <label for="direccion">Dirección: </label><input type="text" maxlength="60" name="direccion" id="direccion" required/><br>
+                        <label for="codigoPostal">Código Postal: </label><input type="text" maxlength="5" pattern="[0-9]{5}" name="codigoPostal" id="codigoPostal" required/><br>
+                        <label for="localidad"></label>Localidad: <input type="text" name="localidad" id="localidad"required/> 
+                </fieldset>
+
+                <fieldset class="contratacion">
+                    <legend>
+                        Tipo de Contratación
+                    </legend> 
+                        <div class="radioButtons">
+                            <label for="nuevaContratacion">Nueva Contratación</label>
+                            <input type="radio" id="nuevaContratacion" name="tipoDeContratacion" value="nuevaContratacion"/>
+                            <label for="portabilidad">Portabilidad</label>
+                            <input type="radio" id="Portablidad" name="tipoDeContratacion" value="portabilidad" />
+                            <label for="cambioDeContrato">Cambio de Contrato</label>    
+                            <input type="radio" id="cambioDeContrato" name="tipoDeContratacion" value="cambioDeContrato" />
+                        </div>
+                    <br>
+                        <div class="selectCompania">
+                        
+                            <label for="companiaActual">Elija la compañia actual:</label>
+                                <select name="companiaActual" id="companiaActual" required>
+                                    <option value="movistar" name="companiaActual">Movistar</option><br>
+                                    <option value="vodafone" name="companiaActual">Vodafone</option><br>
+                                    <option value="yoigo" name="companiaActual">Yoigo</option><br>
+                                    <option value="orange" name="companiaActual">Orange</option><br>
+                                    <option value="noTieneCompania" name="companiaActual">No Tengo Ninguna Compañía</option>
+                                </select>
+                    
+                            <label for="nuevaCompania">En caso de portabilidad, elija la nueva compañia:</label>
+                                <select name="nuevaCompania">
+                                    <option value="movistar" name="nuevaCompania">Movistar</option>
+                                    <option value="vodafone" name="nuevaCompania">Vodafone</option>
+                                    <option value="yoigo" name="nuevaCompania">Yoigo</option>
+                                    <option value="orange" name="nuevaCompania">Orange</option>
+                                </select>
+                        </div>
+                    
+                </fieldset>
+
+                <fieldset class="datosBancarios">
+                    <legend>
+                        Datos Bancarios
+                    </legend>
+                        <label for="pais">País: </label> 
+                            <input 
+                            type="text" 
+                            name="pais" 
+                            id="pais"
+                            placeholder="ES"
+                            required
+                            />
+                            (solo válido ES)
+                    <br>
+                        <label for="controlIban">Control IBAN: </label> 
+                            <input 
+                                type="text" 
+                                name="controlIban" 
+                                id="controlIban" 
+                                placeholder="XX" 
+                                maxlength="2" 
+                                pattern="[0-9]{2}"
+                                required
+                            />
+                            (dos digitos)
+                    <br>
+                        <label for="entidad">Entidad: </label> 
+                            <input 
+                                type="text" 
+                                name="entidad" 
+                                id="entidad" 
+                                placeholder="XXXX"
+                                maxlength="4" 
+                                pattern="[0-9]{4}" 
+                                required
+                            />
+                            (cuatro digitos)
+                    <br>
+                        <label for="sucusal">Sucusal: </label>
+                            <input 
+                                type="text" 
+                                name="sucusal" 
+                                id="sucusal" 
+                                placeholder="XXXX" 
+                                maxlength="4" 
+                                pattern="[0-9]{4}" 
+                                required
+                            />
+                            (cuatro digitos)
+                    <br>
+                        <label for="dc">DC: </label>
+                            <input 
+                                type="text" 
+                                name="dc" 
+                                id="dc" 
+                                placeholder="XX" 
+                                maxlength="2" 
+                                pattern="[0-9]{2}" 
+                                required
+                            />
+                            (dos digitos)
+                    <br>
+                        <label for="cuenta">Cuenta: </label>
+                                <input 
+                                type="text" 
+                                name="cuenta" 
+                                id="cuenta" 
+                                placeholder="XXXXXXXXXX" 
+                                maxlength="10" 
+                                pattern="[0-9]{10}" 
+                                required 
+                                />
+                            (diez digitos)
+                </fieldset>
+
+                <fieldset class="datosEstadisticos">
+                    <legend>
+                        Datos Estadisticos - ¿Cómo nos conoció?
+                    </legend>
+                    <div class="checkEstadisticas">
+                            <input type="checkbox" id="aTravesTv" name="aTravesTv" value="TV">
+                            <label for="aTravesTv"> A través de la TV</label><br>
+                            <input type="checkbox" id="aTravesRadio" name="aTravesRadio" value="radio">
+                            <label for="aTravesRadio"> A través de la radio</label><br>
+                            <input type="checkbox" id="aTravesInternet" name="aTravesInternet" value="internet">
+                            <label for="aTravesInternet"> A través de la internet</label><br>
+                            <input type="checkbox" id="otros" name="otros" value="Otros">
+                            <label for="aTravesInternet"> Otros</label>
+                            <label for="especificarOtros">- Especifique por favor:<label> <input type="text" name="especificarOtros" id="especificarOtros" />
+                                
+                        </div>
+                    <br/>
+                        <div class="slider">
+
+                            <input type="range" id="valoracion" min="1" max="5" value="3" required>
+                            <label for="valoracion">Valoración (1-5, siendo 5 el más alto)</label>
+
+                        </div>
+                    <br/>
+                        <div>
+                            <label for="fechaDeEncuesta">Fecha de la Encuesta</label>
+                                <input type="date" id="fechaDeEncuesta" value="2019-01-01" required/>
+                        </div>
+                </fieldset>
+                
+                <input  type="submit" id="submit" class="botonControlFormulario" value="Enviar Datos"/>
+                <input type="reset"class="botonControlFormulario" value="Borrar Datos">
+            </form>    
+            <button id="mostrarValoracion" onclick="showValoracion">Mostrar Valoración</button>
+            <button id="mostrarCuenta">Mostrar Cuenta</button>
+            <button id="mostrarDiaSemana">Mostrar Dia Semana</button>
+
+
+
+    </div>
+
+<script>
+   
+    function showValoracion() {
+      let sliderValoracion = document.getElementById("valoracion")
+      let valoracion = sliderValoracion.value
+      alert("Ha valorado con "+ valoracion +" punto(s)")
+    }
+
+    function showCuenta() {
+       let pais = document.getElementById("pais").value
+       let controlIban = document.getElementById("controlIban").value
+       let entidad = document.getElementById("entidad").value
+       let sucusal = document.getElementById("sucusal").value
+       let dc = document.getElementById("dc").value
+       let cuenta = document.getElementById("cuenta").value
+        
+       alert(`Le informamos que su cuenta bancaria es: ${pais}-${controlIban}-${entidad}-${sucusal}-${dc}-${cuenta}`)
+    }
+
+   function showDia() {
+        let fecha = new Date();
+        let weekday = [
+            "domingo",
+            "lunes",
+            "martes",
+            "miércoles",
+            "jueves",
+            "viernes",
+            "sábado",
+        ];
+
+            let diaSemana = weekday[fecha.getDay()];
+            alert(`La fecha seleccionada en el elemento de fecha en un ${diaSemana}`)
+   }
+    let valoracionButton = document.querySelector("#mostrarValoracion");
+    valoracionButton.addEventListener("click", showValoracion);
+    
+    let cuentaButton = document.querySelector("#mostrarCuenta");
+    cuentaButton.addEventListener("click", showCuenta)
+
+    let diaButton =  document.querySelector("#mostrarDiaSemana");
+    diaButton.addEventListener("click", showDia)
+</script>
+
+</body>
+</html>

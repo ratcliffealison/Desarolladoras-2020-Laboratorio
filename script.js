@@ -1,5 +1,0 @@
-
-function showValoracion() {
-    alert("hello") 
-     }
-

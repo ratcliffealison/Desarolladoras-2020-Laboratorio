@@ -194,21 +194,34 @@
        alert(`Le informamos que su cuenta bancaria es: ${pais}-${controlIban}-${entidad}-${sucusal}-${dc}-${cuenta}`)
     }
 
-   function showDia() {
-        let fecha = new Date();
-        let weekday = [
-            "domingo",
-            "lunes",
-            "martes",
-            "miércoles",
-            "jueves",
-            "viernes",
-            "sábado",
+
+
+    function showDia() {
+    const dayOfWeekByDate = date => [
+        'domingo',
+        'lunes',
+        'martes',
+        'miércoles',
+        'jueves',
+        'viernes',
+        'sábado',
+            ]
+            
+            [new Date(date).getDay()];
+
+            let dateSelected = document.getElementById("fechaDeEncuesta")
+            let currentDate = dateSelected.value
+
+        const fechasParaProbar = [
+            currentDate
         ];
 
-            let diaSemana = weekday[fecha.getDay()];
-            alert(`La fecha seleccionada en el elemento de fecha en un ${diaSemana}`)
-   }
+        fechasParaProbar.forEach(date => {
+        alert(`La fecha seleccionada en el elemento de fecha en un ${dayOfWeekByDate(date)}`);
+        });
+    }
+
+
     let valoracionButton = document.querySelector("#mostrarValoracion");
     valoracionButton.addEventListener("click", showValoracion);
     
